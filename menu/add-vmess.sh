@@ -10,7 +10,7 @@ clear
 izp=$(cat /root/.isp)
 region=$(cat /root/.region)
 city=$(cat /root/.city)
-domain=$(cat /etc/xray/domain)
+domain=$(cat /usr/local/etc/xray/dns/domain)
 clear
 until [[ $user =~ ^[a-za-z0-9_]+$ && ${client_exists} == '0' ]]; do
 echo -e "
