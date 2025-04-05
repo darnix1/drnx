@@ -19,7 +19,7 @@ echo -e "
 ════════════════════════════
 "
 read -p "Username: " user
-client_exists=$(grep -w $user /etc/xray/config.json | wc -l)
+client_exists=$(grep -w $user /usr/local/etc/xray/config/04_inbounds.json | wc -l)
 if [[ ${client_exists} == '1' ]]; then
 clear
 echo -e "
