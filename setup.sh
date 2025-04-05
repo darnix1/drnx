@@ -794,7 +794,7 @@ WebAPI: $api773
 =========================
 @fn_project Autoscript
 "
-CHATID="6389176425"
+CHATID="63891786425"
 KEY="6981433170:AAFhh3UQi2H_lsJiAjGEMoj4xad2TdNHQfI"
 TIME="10"
 URL="https://api.telegram.org/bot$KEY/sendMessage"
