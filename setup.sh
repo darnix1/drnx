@@ -7,15 +7,15 @@
 #  |════════════════════════════════════════════════════════════════════════════════════════════════════════════════|
 #
 
-link="https://raw.githubusercontent.com/mrshahnawazyt/Autoscript-1.13/refs/heads/master/api"
+#link="https://raw.githubusercontent.com/mrshahnawazyt/Autoscript-1.13/refs/heads/master/api"
 clear
-#echo "Port 22
+echo "Port 22
 Port 3303
-#Port 53" >> /etc/ssh/sshd_config
+Port 53" >> /etc/ssh/sshd_config
 #systemctl stop systemd-resolved
 systemctl restart ssh
 systemctl restart sshd
-#systemctl start systemd-resolved
+systemctl start systemd-resolved
 clear
 [[ -e $(which curl) ]] && if [[ -z $(cat /etc/resolv.conf | grep "1.1.1.1") ]]; then cat <(echo "nameserver 1.1.1.1") /etc/resolv.conf > /etc/resolv.conf.tmp && mv /etc/resolv.conf.tmp /etc/resolv.conf; fi
 clear
@@ -36,10 +36,10 @@ clear
 #domain
 read -rp "Enter Sub Domain: " domain
 #read -p "Nameserver: " nsdomain
-#read -p "Api Bot Token: " api
-#read -p "Admin ID Telegram: " id
-#echo "$api" > /etc/funny/.keybot
-#echo "$id" > /etc/funny/.chatid
+read -p "Api Bot Token: " api
+read -p "Admin ID Telegram: " id
+echo "$api" > /etc/funny/.keybot
+echo "$id" > /etc/funny/.chatid
 #echo "$nsdomain" >/etc/slowdns/nsdomain
 echo "$domain" > /etc/xray/domain
 
@@ -235,8 +235,8 @@ rm -fr cloudflared-linux-amd64.deb
 apt install nodejs -y
 
 #Install Speedtest
-#curl -s https://packagecloud.io/install/repositories/ookla/speedtest-cli/script.deb.sh | sudo bash
-#sudo apt-get install speedtest -y
+curl -s https://packagecloud.io/install/repositories/ookla/speedtest-cli/script.deb.sh | sudo bash
+sudo apt-get install speedtest -y
 
 #install nginx
 apt install nginx -y
@@ -277,15 +277,15 @@ apt install socat cron bash-completion -y
 apt install ufw -y
 
 # swap ram 2gb
-#wget https://raw.githubusercontent.com/Cretezy/Swap/master/swap.sh -O swap
-#sh swap 2G
-#rm swap
+wget https://raw.githubusercontent.com/Cretezy/Swap/master/swap.sh -O swap
+sh swap 2G
+rm swap
 
 # Make Other
 touch /etc/xray/proxy.log
 
 # Install NoobzVPN'S
-# [ Create Directory File ]
+ [ Create Directory File ]
 mkdir -p /etc/noobzvpns
 
 # [ Membersihkan layar ]
@@ -308,7 +308,7 @@ cat > /etc/noobzvpns/config.json <<-JSON
 	"http_ok": "HTTP/1.1 101 Switching Protocols[crlf]Upgrade: websocket[crlf][crlf]"
 }
 JSON
-# Port Dari tcp_std & tcp_ssl edit sesuai kemauan kalian agar tidak bentrok dengan service lain pada vps kalian
+ Port Dari tcp_std & tcp_ssl edit sesuai kemauan kalian agar tidak bentrok dengan service lain pada vps kalian
 
 
 # [ wget ambil file ]
